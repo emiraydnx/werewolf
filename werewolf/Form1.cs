@@ -27,7 +27,7 @@ namespace werewolf
             // Start ve Exit butonlarýný panelin üstüne geri ekle
             mainPanel.Controls.Add(button1);
             mainPanel.Controls.Add(button2);
-
+            
         }
 
 
