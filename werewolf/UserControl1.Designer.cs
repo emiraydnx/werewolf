@@ -59,14 +59,14 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox1.Location = new Point(93, 52);
+            comboBox1.Location = new Point(256, 50);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 2;
             // 
             // button3
             // 
-            button3.Location = new Point(93, 204);
+            button3.Location = new Point(52, 49);
             button3.Name = "button3";
             button3.Size = new Size(151, 28);
             button3.TabIndex = 3;
@@ -78,16 +78,17 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox2.Location = new Point(93, 101);
+            comboBox2.Location = new Point(256, 105);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
             comboBox2.TabIndex = 4;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox3.Location = new Point(93, 152);
+            comboBox3.Location = new Point(256, 164);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(151, 28);
             comboBox3.TabIndex = 5;
