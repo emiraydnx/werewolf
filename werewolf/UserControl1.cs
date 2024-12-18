@@ -45,16 +45,36 @@ namespace werewolf
             newTextBox.Size = new Size(125, 27);
             newTextBox.Location = new Point(388, 214 + height * (playerCount - 4));
             newTextBox.TabIndex = 10;
+            newTextBox.Font = new Font("Showcard gothic", 9);
             this.Controls.Add(newTextBox);
             playerTextBoxes.Add(newTextBox);
             playerCount++;
-
-
-
-
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (playerTextBoxes.Count > 0)
+            {
+                TextBox lastTextBox = playerTextBoxes[playerTextBoxes.Count - 1];
+                this.Controls.Remove(lastTextBox);
+                lastTextBox.Dispose();
+                playerTextBoxes.RemoveAt(playerTextBoxes.Count - 1);
+                playerCount--;
+            }
         }
 
+        private Image ResizeImage(Image img, int width, int height)
+        {
+            // Yeni bir Bitmap oluştur ve boyutlandır
+            Bitmap resizedImg = new Bitmap(width, height);
 
+            using (Graphics g = Graphics.FromImage(resizedImg))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(img, 0, 0, width, height);
+            }
+
+            return resizedImg;
+        }
 
         private void checkedListBox1_SelectedIndexChanged(object? sender, EventArgs e)
         {
@@ -62,39 +82,69 @@ namespace werewolf
             {
                 if (checkedListBox.SelectedIndex != -1)
                 {
-                    // RichTextBox'ı temizle
                     richTextBox1.Clear();
-
-                    // Seçili öğeyi al
                     string selectedItem = checkedListBox.SelectedItem.ToString();
 
+                  
                     // Metni kontrol ederek ekle
                     switch (selectedItem)
                     {
                         case "Wolf":
-                            richTextBox1.Text = "Team: Werewolves\r\n\nGoal: Outnumber the villagers to win.\r\n\nAbilities: Every night, werewolves secretly choose a player to eliminate.";
+                            Image img1 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\wolf.png");
+                            Image resizedImg1 = ResizeImage(img1,150,150);
+                            Clipboard.SetImage(resizedImg1);
+                            
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Werewolves\r\n\nGoal: Outnumber the villagers to win.\r\n\nAbilities: Every night, werewolves secretly choose a player to eliminate.");
                             break;
 
                         case "Villager":
-                            richTextBox1.Text = "Team: Villagers\r\n\nGoal: Eliminate all the werewolves.\r\n\nAbilities: No special powers, but they can vote during the day to eliminate suspected werewolves.";
+                            Image img2 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\3943611.png");
+                            Clipboard.SetImage(img2);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Villagers\r\n\nGoal: Eliminate all the werewolves.\r\n\nAbilities: No special powers, but they can vote during the day to eliminate suspected werewolves.");
                             break;
 
                         case "Doctor":
-                            richTextBox1.Text = "Team: Villagers\r\n\nGoal: Protect villagers from being killed by werewolves.\r\n\nAbilities: Can protect one player (including themselves) from being eliminated each night.";
+                            Image img3 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\doctor.png");
+                            Clipboard.SetImage(img3);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Villagers\r\n\nGoal: Protect villagers from being killed by werewolves.\r\n\nAbilities: Can protect one player (including themselves) from being eliminated each night.");
                             break;
 
                         case "Seer":
-                            richTextBox1.Text = "Team: Villagers\r\n\nGoal: Help identify and eliminate werewolves.\r\n\nAbilities: Each night, the Seer can secretly check one player’s role.";
+                            Image img4 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\seer.png");
+                            Clipboard.SetImage(img4);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Villagers\r\n\nGoal: Help identify and eliminate werewolves.\r\n\nAbilities: Each night, the Seer can secretly check one player’s role.");
                             break;
 
                         case "Jester":
-                            richTextBox1.Text = "Team: Neutral (Solo role)\r\n\nGoal: Get lynched (voted out) during the day phase to win the game.\r\n\nAbilities: No special powers other than trying to act suspicious or manipulating others into voting for them.";
+                            Image img5 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\harlequin.png");
+                            Clipboard.SetImage(img5);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Neutral (Solo role)\r\n\nGoal: Get lynched (voted out) during the day phase to win the game.\r\n\nAbilities: No special powers other than trying to act suspicious or manipulating others into voting for them.");
                             break;
+
                         case "Hunter":
-                            richTextBox1.Text = "Team: Villagers\r\n\nGoal: Eliminate werewolves.\r\n\nAbilities: If the Hunter is eliminated, they can take down one other player with them.";
+                            Image img6 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\man.png");
+                            Clipboard.SetImage(img6);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Villagers\r\n\nGoal: Eliminate werewolves.\r\n\nAbilities: If the Hunter is eliminated, they can take down one other player with them.");
                             break;
+
                         case "BodyGuard":
-                            richTextBox1.Text = "Team: Villagers\r\n\nGoal: Protect villagers from werewolves.\r\n\nAbilities: Similar to the Doctor but may die in place of the person they protect.";
+                            Image img7 = Image.FromFile("C:\\Users\\Emirhan\\Desktop\\werewolf\\werewolf\\bodyguard.png");
+                            Clipboard.SetImage(img7);
+                            richTextBox1.Paste();
+                            Clipboard.Clear();
+                            richTextBox1.AppendText("Team: Villagers\r\n\nGoal: Protect villagers from werewolves.\r\n\nAbilities: Similar to the Doctor but may die in place of the person they protect.");
                             break;
                     }
                 }
@@ -103,7 +153,7 @@ namespace werewolf
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            richTextBox1.Font = new Font("Showcard gothic", 9);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -111,25 +161,6 @@ namespace werewolf
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (playerTextBoxes.Count > 0)
-            {
-                // Son eklenen TextBox'ı al
-                TextBox lastTextBox = playerTextBoxes[playerTextBoxes.Count - 1];
-
-                // Form'dan TextBox'ı kaldır
-                this.Controls.Remove(lastTextBox);
-
-                // Bellekten sil
-                lastTextBox.Dispose();
-
-                // Listeyi güncelle
-                playerTextBoxes.RemoveAt(playerTextBoxes.Count - 1);
-
-                // Sonraki player için sayacı azalt
-                playerCount--;
-            }
-        }
+        
     }
 }

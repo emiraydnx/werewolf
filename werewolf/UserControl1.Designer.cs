@@ -67,9 +67,9 @@
             // 
             checkedListBox1.AccessibleRole = AccessibleRole.MenuBar;
             checkedListBox1.BorderStyle = BorderStyle.None;
+            resources.ApplyResources(checkedListBox1, "checkedListBox1");
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Items.AddRange(new object[] { resources.GetString("checkedListBox1.Items"), resources.GetString("checkedListBox1.Items1"), resources.GetString("checkedListBox1.Items2"), resources.GetString("checkedListBox1.Items3"), resources.GetString("checkedListBox1.Items4"), resources.GetString("checkedListBox1.Items5"), resources.GetString("checkedListBox1.Items6") });
-            resources.ApplyResources(checkedListBox1, "checkedListBox1");
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 

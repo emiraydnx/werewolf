@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 14</value>
   </data>
@@ -167,6 +170,9 @@
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 358</value>
   </data>
@@ -190,6 +196,9 @@
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="checkedListBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
   </data>
   <data name="checkedListBox1.Items" xml:space="preserve">
     <value>Wolf</value>
@@ -216,7 +225,7 @@
     <value>43, 160</value>
   </data>
   <data name="checkedListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 198</value>
+    <value>274, 231</value>
   </data>
   <data name="checkedListBox1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -233,11 +242,14 @@
   <data name="&gt;&gt;checkedListBox1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 82</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 27</value>
+    <value>125, 26</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -261,11 +273,14 @@
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 124</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 27</value>
+    <value>125, 26</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -288,11 +303,14 @@
   <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="textBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 169</value>
   </data>
   <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 27</value>
+    <value>125, 26</value>
   </data>
   <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -315,11 +333,14 @@
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 214</value>
   </data>
   <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 27</value>
+    <value>125, 26</value>
   </data>
   <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -343,10 +364,10 @@
     <value>3</value>
   </data>
   <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>787, 124</value>
+    <value>787, 82</value>
   </data>
   <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 287</value>
+    <value>444, 397</value>
   </data>
   <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -396,6 +417,9 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 9pt</value>
+  </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 358</value>
   </data>
@@ -427,7 +451,7 @@
     <value>8, 20</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1192, 476</value>
+    <value>1362, 505</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl1</value>
