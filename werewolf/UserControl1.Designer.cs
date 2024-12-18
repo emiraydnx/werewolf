@@ -28,94 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
             button1 = new Button();
             button2 = new Button();
-            comboBox1 = new ComboBox();
             button3 = new Button();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            checkedListBox1 = new CheckedListBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            richTextBox1 = new RichTextBox();
+            label1 = new Label();
+            button4 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(14, 428);
+            resources.ApplyResources(button1, "button1");
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(1055, 428);
+            resources.ApplyResources(button2, "button2");
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Start";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox1.Location = new Point(256, 50);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 2;
             // 
             // button3
             // 
-            button3.Location = new Point(52, 49);
+            button3.Cursor = Cursors.Hand;
+            resources.ApplyResources(button3, "button3");
             button3.Name = "button3";
-            button3.Size = new Size(151, 28);
-            button3.TabIndex = 3;
-            button3.Text = "add role";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // comboBox2
+            // checkedListBox1
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox2.Location = new Point(256, 105);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 4;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            checkedListBox1.AccessibleRole = AccessibleRole.MenuBar;
+            checkedListBox1.BorderStyle = BorderStyle.None;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { resources.GetString("checkedListBox1.Items"), resources.GetString("checkedListBox1.Items1"), resources.GetString("checkedListBox1.Items2"), resources.GetString("checkedListBox1.Items3"), resources.GetString("checkedListBox1.Items4"), resources.GetString("checkedListBox1.Items5"), resources.GetString("checkedListBox1.Items6") });
+            resources.ApplyResources(checkedListBox1, "checkedListBox1");
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
-            // comboBox3
+            // textBox1
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Wolf", "Villager", "Doctor", "Wizard", "Joker", "Hunter" });
-            comboBox3.Location = new Point(256, 164);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 5;
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(textBox2, "textBox2");
+            textBox2.Name = "textBox2";
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(textBox3, "textBox3");
+            textBox3.Name = "textBox3";
+            // 
+            // textBox4
+            // 
+            resources.ApplyResources(textBox4, "textBox4");
+            textBox4.Name = "textBox4";
+            // 
+            // richTextBox1
+            // 
+            resources.ApplyResources(richTextBox1, "richTextBox1");
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
+            // button4
+            // 
+            button4.Cursor = Cursors.Hand;
+            resources.ApplyResources(button4, "button4");
+            button4.Name = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // UserControl1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
+            BackColor = SystemColors.ActiveCaption;
+            Controls.Add(button4);
+            Controls.Add(label1);
+            Controls.Add(richTextBox1);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(checkedListBox1);
             Controls.Add(button3);
-            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
+            ForeColor = Color.Black;
             Name = "UserControl1";
-            Size = new Size(1179, 476);
+            Tag = "Roles";
             Load += UserControl1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
         private Button button2;
-        private ComboBox comboBox1;
         private Button button3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private CheckedListBox checkedListBox1;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private RichTextBox richTextBox1;
+        private Label label1;
+        private Button button4;
     }
 }
