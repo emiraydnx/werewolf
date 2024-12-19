@@ -9,7 +9,11 @@ namespace werewolf
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None; 
+            this.WindowState = FormWindowState.Maximized;
+            this.TopMost = true;
         }
+        
         private void LoadControl(UserControl control)
         {
             // Paneli temizler
@@ -47,7 +51,7 @@ namespace werewolf
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

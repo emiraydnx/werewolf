@@ -33,13 +33,10 @@
             button2 = new Button();
             button3 = new Button();
             checkedListBox1 = new CheckedListBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
             richTextBox1 = new RichTextBox();
             label1 = new Label();
             button4 = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -54,6 +51,7 @@
             resources.ApplyResources(button2, "button2");
             button2.Name = "button2";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -73,36 +71,18 @@
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
-            // textBox1
-            // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.Name = "textBox2";
-            // 
-            // textBox3
-            // 
-            resources.ApplyResources(textBox3, "textBox3");
-            textBox3.Name = "textBox3";
-            // 
-            // textBox4
-            // 
-            resources.ApplyResources(textBox4, "textBox4");
-            textBox4.Name = "textBox4";
-            // 
             // richTextBox1
             // 
             resources.ApplyResources(richTextBox1, "richTextBox1");
+            richTextBox1.BackColor = Color.White;
+            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
             richTextBox1.Name = "richTextBox1";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // label1
             // 
             resources.ApplyResources(label1, "label1");
+            label1.BackColor = Color.Transparent;
             label1.Name = "label1";
             // 
             // button4
@@ -113,18 +93,23 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // label2
+            // 
+            label2.AllowDrop = true;
+            resources.ApplyResources(label2, "label2");
+            label2.BackColor = Color.Transparent;
+            label2.Name = "label2";
+            label2.Click += label2_Click;
+            // 
             // UserControl1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            Controls.Add(label2);
             Controls.Add(button4);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(checkedListBox1);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -143,12 +128,9 @@
         private Button button2;
         private Button button3;
         private CheckedListBox checkedListBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
         private RichTextBox richTextBox1;
         private Label label1;
         private Button button4;
+        private Label label2;
     }
 }
